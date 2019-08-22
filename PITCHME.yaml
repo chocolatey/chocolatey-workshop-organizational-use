@@ -1,0 +1,9 @@
+published : true
+theme : moon
+theme-override : assets/css/PITCHME.css
+footnote : "@gep13 and @pauby"
+gatoken : UA-20926037-2
+logo: assets/images/chocolatey.png
+logo-position: top-right
+highlight : atom-one-dark
+layout: center

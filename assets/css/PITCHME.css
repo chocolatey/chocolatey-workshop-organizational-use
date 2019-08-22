@@ -1,0 +1,93 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: white !important;
+}
+
+h1 { font-size: 5rem !important; }
+h2 { font-size: 3.5rem !important; }
+h3 { font-size: 2.5rem !important; }
+h4 { font-size: 2rem !important; }
+
+.reveal a {
+    color: #643B85
+}
+
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal pre {
+    margin:0px !important;
+}
+.bio image {
+    width: 30%;
+}
+
+.bio-name {
+    text-align: center;
+}
+
+.bio-contact {
+    color: white;
+    font-size: 0.7em !important;
+    font-weight: bolder !important;
+}
+
+.twitter-blue {
+    color: #00aced;
+}
+
+.choco-blue {
+    color: #80B5E3;
+}
+
+#
+# The following CSS is taken from https://github.com/gitpitch/the-template/blob/master/template/css/PITCHME.css
+#
+
+.span-5  { width:  5% }
+.span-10 { width: 10% }
+.span-15 { width: 15% }
+.span-20 { width: 20% }
+.span-25 { width: 25% }
+.span-30 { width: 30% }
+.span-35 { width: 35% }
+.span-40 { width: 40% }
+.span-45 { width: 45% }
+.span-50 { width: 50% }
+.span-55 { width: 55% }
+.span-60 { width: 60% }
+.span-65 { width: 65% }
+.span-70 { width: 70% }
+.span-75 { width: 75% }
+.span-80 { width: 80% }
+.span-85 { width: 85% }
+.span-90 { width: 90% }
+.span-95 { width: 95% }
+.span-100 { width: 100% }
+
+.text-black  { color: #000000 !important; }
+.text-blue   { color: #4487F2 !important; }
+.text-gray   { color: #777777 !important; }
+.text-green  { color: #8EA33B !important; }
+.text-orange { color: #F26225 !important; }
+.text-pink   { color: #E71E60 !important; }
+.text-purple { color: #643B85 !important; }
+.text-yellow { color: #F5DB2E !important; }
+.text-white { color: #FFFFFF !important; }
+
+.exercise-box {
+    width: 100%;
+    border:1px solid black !important;
+    padding: 5px 15px !important;
+    background-color: grey;
+    text-align: left;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif !important;
+  }

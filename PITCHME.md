@@ -363,3 +363,46 @@ Test login credentials to make sure you have access.
 ## Result
 
 ![Output from choco install putty](assets/images/choco-install-putty.png)
+
+---
+
+# Sources
+
+TODO: Need to add some information here about Nexus
+
++++
+
+## Sources
+
+What is a Chocolatey Source?
+
++++
+
+## List current Sources
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+<pre><code class="lang-powershell hljs"><span class="line">choco source</span><span class="line">choco source list</span></code></pre>
+
+@snapend
+
++++
+
+## Result
+
+![Output from choco source](assets/images/choco-source.png)
+
++++
+
+## Add Test Repository Source
+
++++
+
+## Result
+
++++
+
+## Add Production Repository Source

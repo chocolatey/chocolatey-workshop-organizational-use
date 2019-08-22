@@ -406,3 +406,13 @@ What is a Chocolatey Source?
 +++
 
 ## Add Production Repository Source
+
+---
+
+@title[Resources]
+## Resources
+
+* Chocolatey Documentation - https://chocolatey.org/docs
+* Gitter Chat - https://gitter.im/chocolatey/choco
+* Google Groups - https://groups.google.com/forum/#!forum/chocolatey
+* Learning Resources - https://chocolatey.org/docs/resources

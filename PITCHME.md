@@ -187,3 +187,61 @@ Once in a while, the instructions will say:
 This needs to be an Administrator session.
 
 * Press [Windows], type `powershell`, right click on entry and select `Run as Administrator`
+
++++
+
+@title[Test RDP Access]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Test RDP Access)
+@snapend
+
+You should have been given a piece of paper like this:
+
+![RDP Access](assets/images/rdp-access.png)
+
+Test login credentials to make sure you have access.
+
+**NOTE:** Initial login will likely cause a reboot of VM.
+
+---
+
+## Chocolatey Fundamentals
+
++++
+
+@title[What is Chocolatey?]
+
+## What is Chocolatey?
+
++++
+
+@title[A Definition...]
+
+### A Definition...
+
+@quote[Chocolatey allows you to deploy any Windows software, anywhere, with anything, and manage and track that software over time.](Rob Reynolds - Creator of Chocolatey)
+
++++
+
+#### Chocolatey is a package manager for Windows
+
++++
+
+#### Similar to apt-get, yum, and Homebrew
+
++++
+
+### With Chocolatey you can...
+
+* Manage ANY software, not just installers
+* Define dependencies
+* Write a software deployment one time (with PowerShell)
+* Test your deployment before deploying to Production
+* Deploy to any supported version of Windows (including Server.Core and Docker Containers)
+* Track and Report on software
+
++++?image=assets/images/magic.gif&size=45% auto&color=#A74433
+
+@title[It's Magic!]

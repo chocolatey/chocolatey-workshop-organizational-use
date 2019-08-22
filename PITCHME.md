@@ -168,3 +168,22 @@ Agenda
 
 @ulend
 @snapend
+
+---
+
+@title[Terminals]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Terminals)
+@snapend
+
+Once in a while, the instructions will say:
+
+@quote[Open a new terminal]
+
+![PowerShell Terminal](assets/images/terminal.png)
+
+This needs to be an Administrator session.
+
+* Press [Windows], type `powershell`, right click on entry and select `Run as Administrator`

@@ -84,10 +84,35 @@ Senior Technical Engineer @ Chocolatey Software
 
 @snap[west]
 @ul[](false)
-- 13:30: Workshop Starts
-- 15:00: Coffee Break
-- 17:00: Workshop Ends
+
+* 13:30: Workshop Starts
+* 15:00: Coffee Break
+* 17:00: Workshop Ends
+
 @ulend
 <br/><br/>
 Please feel free to interrupt for any questions that you might have.
+@snapend
+
++++
+
+@title[Agenda]
+@transition[none]
+
+@snap[north-west]
+Agenda
+@snapend
+
+@snap[west]
+@ul[](false)
+
+* Get access to workshop environments
+* Chocolatey fundamentals
+* Configuring package repositories
+* Using Chocolatey self-service
+* How to use Chocolatey sync command
+* Combining Chocolatey and Configuration Management
+* Chocolatey Central Management
+
+@ulend
 @snapend

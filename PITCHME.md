@@ -409,6 +409,19 @@ What is a Chocolatey Source?
 
 ---
 
+@title[Questions]
+## Questions?
+
+Feel free to get in touch after the workshop.
+
+Email: gary@chocolatey.io / paul@chocolatey.io
+
+Twitter: @gep13 / @pauby
+
+Web: https://chocolatey.org
+
+---
+
 @title[Resources]
 ## Resources
 

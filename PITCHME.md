@@ -65,3 +65,28 @@ Senior Technical Engineer @ Chocolatey Software
 @fa[envelope choco-blue]&nbsp;&nbsp;paul@chocolatey.io
 @snapend
 
+---
+
+@title[Agenda]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Agenda)
+@snapend
+
+@title[Agenda]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Agenda)
+@snapend
+
+@snap[west]
+@ul[](false)
+- 13:30: Workshop Starts
+- 15:00: Coffee Break
+- 17:00: Workshop Ends
+@ulend
+<br/><br/>
+Please feel free to interrupt for any questions that you might have.
+@snapend

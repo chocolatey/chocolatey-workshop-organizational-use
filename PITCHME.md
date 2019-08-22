@@ -137,3 +137,34 @@ Agenda
   * but it's OK if you are not a Chocolatey expert!
 @ulend
 @snapend
+
+---
+
+@title[Hands-on Sections]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Hands-on Sections)
+@snapend
+
+@snap[north span-100]
+<br><br>
+@ul[](false)
+
+* Uses Chocolatey 0.10.11, Chocolatey.Server 0.2.5, and Jenkins 2.138.1
+* All hands-on section are clearly identified, like the rectangle below:
+
+@ulend
+@snapend
+
+@snap[south exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+@ul[](false)
+
+* This is the stuff you are supposed to do!
+* Go to [this url](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/master) to view these slides.
+
+@ulend
+@snapend

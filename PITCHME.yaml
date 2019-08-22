@@ -7,3 +7,4 @@ logo: assets/images/chocolatey.png
 logo-position: top-right
 highlight : atom-one-dark
 layout: center
+remote-control : true

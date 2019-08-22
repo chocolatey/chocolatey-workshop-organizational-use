@@ -138,7 +138,7 @@ Agenda
 @ulend
 @snapend
 
----
++++
 
 @title[Hands-on Sections]
 @transition[none]
@@ -169,7 +169,7 @@ Agenda
 @ulend
 @snapend
 
----
++++
 
 @title[Terminals]
 @transition[none]

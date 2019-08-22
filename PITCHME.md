@@ -116,3 +116,23 @@ Agenda
 
 @ulend
 @snapend
+
+---
+
+@title[Pre-Requisites]
+@transition[none]
+
+@snap[north-west]
+@css[choco-blue](Pre-Requisites)
+@snapend
+
+@snap[west]
+@ul[](false)
+- Computer with network connection and RDP client
+  - on Windows, you are probably all set
+  - on macOS, get Microsoft Remote Desktop from the App Store
+  - on Linux, get [remmina](https://wiki.ubuntuusers.de/remmina/)
+- Some Chocolatey knowledge
+  - but it's OK if you are not a Chocolatey expert!
+@ulend
+@snapend

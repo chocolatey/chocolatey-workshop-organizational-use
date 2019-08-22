@@ -245,3 +245,121 @@ Test login credentials to make sure you have access.
 +++?image=assets/images/magic.gif&size=45% auto&color=#A74433
 
 @title[It's Magic!]
+
+---
+
+## How does Chocolatey work?
+
++++
+
+@title[Let's install paint.net]
+
+## Let's install paint.net...
+
++++
+
+@title[paint.net website]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-1.png)
+
++++
+
+@title[Not the paint.net website]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-2.png)
+
++++
+
+@title[Google paint.net]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-3.png)
+
++++
+
+@title[Actual paint.net website]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-4.png)
+
++++
+
+@title[paint.net download]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-5.png)
+
++++
+
+@title[Mirror website]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-6.png)
+
++++
+
+@title[Actual paint.net download]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-7.png)
+
++++
+
+@title[Unblock zip file]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-8.png)
+
++++
+
+@title[Extract zip file]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-9.png)
+
++++
+
+@title[Install paint.net]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-10.png)
+
++++
+
+@title[paint.net dependencies]
+
+<!-- .slide: data-transition="none" -->
+![Build Step](assets/images/install-paint.net-step-11.png)
+
++++
+
+@title[There has to be a better way!]
+
+## @fa[quote-left] There has to be a better way!
+
++++
+
+@title[Chocolatey]
+
+![Chocolatey](assets/images/icon.png)
+
+---
+
+## Install putty
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+<pre><code class="lang-powershell hljs"><span class="line">choco install putty.install</span></code></pre>
+
+@snapend
+
++++
+
+## Result
+
+![Output from choco install putty](assets/images/choco-install-putty.png)

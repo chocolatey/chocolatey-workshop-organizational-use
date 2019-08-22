@@ -35,7 +35,8 @@ Senior Software Engineer @ Chocolatey Software
 @fa[envelope choco-blue]&nbsp;&nbsp;gary@chocolatey.io
 @snapend
 
----
++++
+
 @title[Who Am I? - Paul Broadwith]
 @transition[none]
 

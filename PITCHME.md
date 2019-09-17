@@ -354,7 +354,7 @@ Test login credentials to make sure you have access.
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
 
-<pre><code class="lang-powershell hljs"><span class="line">choco install putty.install</span></code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">choco install putty</span></code></pre>
 
 @snapend
 

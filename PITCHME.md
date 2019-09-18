@@ -433,7 +433,7 @@ What is a Chocolatey Source?
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
 
-<pre><code class="lang-powershell hljs"><span class="line">chocolateygui</code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">chocolateygui</span></code></pre>
 
 @snapend
 
@@ -491,7 +491,7 @@ What is a Chocolatey Source?
 +++
 ## Result
 
-![Chocolatey GUI](assets/images/malwarebytes_install_error.png)
+![Malwarebytes Install Error](assets/images/malwarebytes_install_error.png)
 
 +++
 
@@ -511,9 +511,61 @@ What is a Chocolatey Source?
 @snapend
 
 +++
+
 ## Result
 
-![Chocolatey GUI](assets/images/malwarebytes_install_success.png)
+![Malwarebytes Install Success](assets/images/malwarebytes_install_success.png)
+
+---
+
+## Chocolatey Central Management
+
++++
+
+@title[What is Chocolatey Central Management?]
+
+## What is Chocolatey Central Management?
+
++++
+
+@quote[CCM provides you insights across your desktop and endpoint environments.]o
+
+![CCM Overview](assets/images/ccm_overview.jpg)
+
++++
+
+Once installed and configured, you can use CCM to:
+
+* bring reporting to teh Organisational level
+* quickly see all software across the Organization and see what needs attention immediately
+* create reports for tracking and auditing purposes
+
++++
+
+# Demo
+
++++
+
+## CCM in action...
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+- Open a terminal and execute the following:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco config set --name="'centralManagementServiceUrl'" --value="'https://$($hostname):24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
+
+@snapend
+
++++
+
+## Result
+
+Open CCM Web UI and see clients checking into CCM
 
 ---
 

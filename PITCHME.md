@@ -518,6 +518,159 @@ What is a Chocolatey Source?
 
 ---
 
+## Choco Sync
+
++++
+
+@title[What is Choco Sync]
+
+## What is Choco Sync?
+
++++
+
+@quote[Chocolatey maintains its own state of the world, while Windows maintains the state of Programs and Features. If an application is upgraded or uninstalled outside of Chocolatey, such as is the case with Google Chrome and its auto updating utility, Chocolatey doesn't know about the change. The synchronize feature keeps Chocolatey's state in sync with Programs and Features, removing possible system-installed state drift.]
+
++++
+
+## Automatic Sync
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco list -lo</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![Malwarebytes Before Choco Sync](assets/images/choco-sync-malwarebytes-before.png)
+
++++
+
+## Let's uninstall Malwarebytes
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open Add/Remove programs and manually uninstall Malwarebytes
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco list -lo</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![Malwarebytes After Choco Sync](assets/images/choco-sync-malwarebytes-after.png)
+
++++
+
+## Sync Command
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco list -li</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![VLC Before Choco Sync](assets/images/choco-sync-vlc-before.png)
+
++++
+
+## Sync Command
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco sync --id="'VLC media player'" --package-id="'vlc'"</span></code></pre>
+
+@ul[](false)
+* Run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco list -li</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![VLC After Choco Sync](assets/images/choco-sync-vlc-after.png)
+
++++
+
+## And now to upgrade it...
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco outdated</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![Choco outdated](assets/images/choco-outdated-vlc.png)
+
++++
+
+## And now to upgrade it...
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+
+<pre><code class="lang-powershell hljs"><span class="line">choco upgrade vlc</span></code></pre>
+@snapend
+
++++
+
+## Result
+
+![Choco Upgrade VLC](assets/images/choco-upgrade-vlc.png)
+
+---
+
 ## Chocolatey Central Management
 
 +++

@@ -489,6 +489,11 @@ What is a Chocolatey Source?
 @snapend
 
 +++
+## Result
+
+![Chocolatey GUI](assets/images/malwarebytes_install_error.png)
+
++++
 
 ## Let's try that again...
 

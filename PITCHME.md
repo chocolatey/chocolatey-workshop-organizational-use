@@ -510,6 +510,11 @@ What is a Chocolatey Source?
 @ulend
 @snapend
 
++++
+## Result
+
+![Chocolatey GUI](assets/images/malwarebytes_install_success.png)
+
 ---
 
 @title[Questions]

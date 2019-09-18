@@ -140,6 +140,19 @@ Please feel free to interrupt for any questions that you might have.
 
 +++
 
+@title[Slide Navigation]
+
+@snap[north-west]
+@css[choco-blue](Slide Navigation)
+@snapend
+
+* Next Slide - `n` or `Page Down`
+* Previous Slide - `p` or `Page Up`
+
+Would recommend not using arrow keys.
+
++++
+
 @title[Hands-on Sections]
 @transition[none]
 

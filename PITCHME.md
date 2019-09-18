@@ -461,7 +461,7 @@ What is a Chocolatey Source?
 
 +++
 
-## Let's install 1Password
+## Let's install MalwareBytes
 
 @snap[center exercise-box]
 
@@ -470,7 +470,7 @@ What is a Chocolatey Source?
 
 @ul[](false)
 - Browse to the c:/installers folder
-- Double click the 1Password installer
+- Double click the MalwareBytes installer
 - It will fail with an error, i.e. not enough permissions
 @ulend
 @snapend
@@ -486,7 +486,7 @@ What is a Chocolatey Source?
 
 @ul[](false)
 - Open Chocolatey GUI
-- Switch to the chocolatey source and search for 1Password
+- Switch to the chocolatey source and search for malwarebytes
 - Right click and select install
 - Go to Add Remove Programs, and verify it is installed correctly
 @ulend

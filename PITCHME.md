@@ -100,7 +100,7 @@ Please feel free to interrupt for any questions that you might have.
 @transition[none]
 
 @snap[north-west]
-Agenda
+@css[choco-blue](Agenda)
 @snapend
 
 @snap[west]
@@ -406,6 +406,91 @@ What is a Chocolatey Source?
 +++
 
 ## Add Production Repository Source
+
+---
+
+## Chocolatey Self Service
+
++++
+
+## Open Chocolatey GUI
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+<pre><code class="lang-powershell hljs"><span class="line">chocolateygui</code></pre>
+
+@snapend
+
++++
+
+## Result
+
+![Chocolatey GUI](assets/images/chocolatey-gui.png)
+
++++
+
+## Setup Self Service
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+<pre><code class="lang-powershell hljs"><span class="line">choco feature disable --name="'showNonElevatedWarnings'"</span><span class="line">choco feature enable --name="'useBackgroundService'"</span><span class="line">choco feature enable --name="'useBackgroundServiceWithNonAdministratorsOnly'"</span></code></pre>
+
+@snapend
+
++++
+
+## Switch to Non-Admin account
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+- Log out as the current user
+- Log in as the nonAdmin user
+@ulend
+
+@snapend
+
++++
+
+## Let's install 1Password
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+- Browse to the c:/installers folder
+- Double click the 1Password installer
+- It will fail with an error, i.e. not enough permissions
+@ulend
+@snapend
+
++++
+
+## Let's try that again...
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+- Open Chocolatey GUI
+- Switch to the chocolatey source and search for 1Password
+- Right click and select install
+- Go to Add Remove Programs, and verify it is installed correctly
+@ulend
+@snapend
 
 ---
 

@@ -36,6 +36,11 @@ in Azure.
 * Check and ask in advance if your workshop location allows outgoing RDP
 connections at port 3389.
 
+Important notes:
+
+* Before running the `initialize-azure.sh` script make sure you have set the default Azure subscription to use by running `az account set -s <SUBSCRIPTION ID>`;
+* Make sure the `initialize-azure.sh` script has the execution bit set by running `chmod +x initialize_azure.sh`
+
 ## Problems? Questions? Feedback?
 
 * If you have problems, find a bug or have questions, don't hesitate to contact us.

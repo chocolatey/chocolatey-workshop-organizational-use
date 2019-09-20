@@ -1,0 +1,69 @@
+{
+  "builders": [
+    {
+      "azure_tags": {
+        "circle_build_num": "{{user `circle_build_num`}}"
+      },
+      "client_id": "{{user `client_id`}}",
+      "client_secret": "{{user `client_secret`}}",
+      "communicator": "winrm",
+      "image_offer": "WindowsServer",
+      "image_publisher": "MicrosoftWindowsServer",
+      "image_sku": "2016-Datacenter",
+      "location": "{{user `location`}}",
+      "managed_image_name": "{{user `image_name`}}",
+      "managed_image_resource_group_name": "chocolatey-internalizer-images",
+      "os_type": "Windows",
+      "subscription_id": "{{user `subscription_id`}}",
+      "tenant_id": "{{user `tenant_id`}}",
+      "type": "azure-arm",
+      "vm_size": "{{user `vm_size`}}",
+      "winrm_insecure": "true",
+      "winrm_timeout": "3m",
+      "winrm_use_ssl": "true",
+      "winrm_username": "packer"
+    }
+  ],
+  "post-processors": [],
+  "provisioners": [
+    {
+      "scripts": [
+        "../../scripts/InstallOpenSsh.ps1",
+        "../../scripts/InstallChocolatey.ps1",
+        "../../scripts/InstallBGInfo.ps1",
+        "../../scripts/InstallSharedApps.ps1",
+        "../../scripts/InstallAdditionalApps.ps1",
+        "../../scripts/ProvisionChocolateyServer.ps1",
+        "../../scripts/ProvisionJenkins.ps1",
+        "../../scripts/InstallChocolateyLicensed.ps1",
+        "../../scripts/InstallWindowsUpdates.ps1"
+      ],
+      "environment_vars": [
+        "AZURE_SAS={{user `azure_sas`}}",
+        "LICENSE_DOWNLOAD_URL={{user `license_download_url`}}",
+        "LICENSE_NUPKG_DOWNLOAD_URL={{user `license_nupkg_download_url`}}"
+      ],
+      "type": "powershell"
+    },
+    {
+      "inline": [
+        "& $env:SystemRoot\\System32\\Sysprep\\Sysprep.exe /oobe /generalize /quiet /quit",
+        "while($true) { $imageState = Get-ItemProperty HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\State | Select ImageState; if($imageState.ImageState -ne 'IMAGE_STATE_GENERALIZE_RESEAL_TO_OOBE') { Write-Host $imageState.ImageState; Start-Sleep -s 10  } else { break } }"
+      ],
+      "type": "powershell"
+    }
+  ],
+  "variables": {
+    "azure_sas": "{{env `AZURE_SAS`}}",
+    "license_download_url": "{{env `LICENSE_DOWNLOAD_URL`}}",
+    "license_nupkg_download_url": "{{env `LICENSE_NUPKG_DOWNLOAD_URL`}}",
+    "circle_build_num": "{{env `CIRCLE_BUILD_NUM`}}",
+    "client_id": "{{env `ARM_CLIENT_ID`}}",
+    "client_secret": "{{env `ARM_CLIENT_SECRET`}}",
+    "image_name": "win2016",
+    "location": "North Europe",
+    "subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}",
+    "tenant_id": "{{env `ARM_TENANT_ID`}}",
+    "vm_size": "Standard_D2_v3"
+  }
+}

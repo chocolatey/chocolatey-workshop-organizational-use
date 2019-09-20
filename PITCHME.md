@@ -726,6 +726,22 @@ Test login credentials to make sure you have access.
 
 ---
 
+## Chocolatey and Configuration Management Systems
+
++++
+
+## What does Chocolatey integrate with?
+
++++
+
+## Everything!
+
+![Chocolatey Integrations](assets/images/integrations.jpg)
+
+The @css[text-gold text-bold](Sane) Way to Manage Software on Windows
+
+---
+
 ## Chocolatey Central Management
 
 +++

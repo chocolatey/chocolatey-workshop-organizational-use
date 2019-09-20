@@ -9,6 +9,7 @@ if (-not (Test-Path $packagePath)) {
 
 # download each file and place it into the packages folder
 @( 'chocolatey.0.10.15.nupkg',
+    'chocolatey-nexus-repo.1.0.0.nupkg',
     '7zip.install.19.0.nupkg',
     'adoptopenjdkjre.12.0.2.10.nupkg',
     'bginfo.4.25.nupkg',

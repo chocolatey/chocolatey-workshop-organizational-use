@@ -1,7 +1,7 @@
 #!/bin/bash
-resource_group=chocolatey-internalizer-images
+resource_group=chocolatey-organizational-images
 region="North Europe"
-aadClientName=chocolatey-internalizer-workshop-packer
+aadClientName=chocolatey-organizational-workshop-packer
 
 echo "Creating image resource group $resource_group"
 az group create -n $resource_group -l "$region" | jq -r .id

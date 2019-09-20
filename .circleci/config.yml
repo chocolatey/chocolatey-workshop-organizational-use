@@ -1,0 +1,189 @@
+version: 2
+
+general:
+  branches:
+    only:
+      - master
+jobs:
+  shellcheck:
+    docker:
+      - image: nlknguyen/alpine-shellcheck
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run Shellcheck
+          command: shellcheck -s bash prepare-vms/azure/*.sh prepare-vms/azure/packer/*.sh
+
+  psscriptanalyzer:
+    docker:
+      - image: microsoft/powershell
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run PSScriptAnalyzer
+          command: |
+            pwsh -c 'Install-Module PSScriptAnalyzer -Force;
+              $Results = Invoke-ScriptAnalyzer -Path . -Recurse -Severity Error;
+              $Results
+              if ($Results) {
+                Throw "Test failed. PSScriptAnalyzer found issues."
+              }
+            '
+
+  packer-validate:
+    docker:
+      - image: hashicorp/packer:1.2.4
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run Packer validate
+          command: |
+            cd prepare-vms/azure/packer
+            for filename in *.json; do
+              packer validate $filename
+            done
+
+  packer: &packer
+    docker:
+      - image: hashicorp/packer:1.2.4
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run Packer build on Azure
+          command: ./prepare-vms/azure/packer/circle-build.sh
+          no_output_timeout: 1800
+
+  terraform-validate:
+    docker:
+      - image: hashicorp/terraform:0.11.7
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run Terraform validate
+          command: |
+            cd prepare-vms/azure/terraform
+            apk add pwgen
+            ./create-passwords.sh
+            terraform init
+            terraform validate
+
+  terraform: &terraform
+    docker:
+      - image: hashicorp/terraform:0.11.7
+
+    steps:
+      - checkout
+
+      - run:
+          name: Build infrastructure
+          command: ./prepare-vms/azure/terraform/circle-build.sh
+
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
+            - .
+
+  makepdf:
+    machine: true
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: /tmp/workspace
+
+      - run:
+          name: Make PDF
+          command: |
+            cd /tmp/workspace
+            if [ -f machines.md ]; then
+              npm install -g mdpdf
+              cp machines.md ${CIRCLE_TAG}-machines.md
+              mdpdf ${CIRCLE_TAG}-machines.md
+              echo "Uploading ${CIRCLE_TAG}-machines.pdf to Slack"
+
+              curl -F file=@${CIRCLE_TAG}-machines.pdf "https://slack.com/api/files.upload?token=${SLACK_TOKEN}&channels=internalizer-workshop&pretty=1"
+            fi
+
+  build-windows-2016:
+    <<: *packer
+    environment:
+      - PACKER_TEMPLATE: "windows_2016"
+
+workflows:
+  version: 2
+
+  test-and-build:
+    jobs:
+      - shellcheck
+      - psscriptanalyzer
+      - packer-validate
+      - terraform-validate
+      - build-windows-2016:
+          requires:
+            - shellcheck
+            - psscriptanalyzer
+            - packer-validate
+            - terraform-validate
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only:
+                - master
+
+  build-infrastructure:
+    jobs:
+      - shellcheck:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/
+      - psscriptanalyzer:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/
+      - packer-validate:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/
+      - terraform-validate:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/
+      - terraform:
+          requires:
+            - shellcheck
+            - psscriptanalyzer
+            - packer-validate
+            - terraform-validate
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/
+      - makepdf:
+          requires:
+            - terraform
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*-.*/

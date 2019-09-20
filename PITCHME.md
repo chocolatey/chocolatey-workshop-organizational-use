@@ -382,15 +382,15 @@ Test login credentials to make sure you have access.
 
 ---
 
-# Sources
-
-TODO: Need to add some information here about Nexus
+## Chocolatey Sources
 
 +++
 
-## Sources
+## What is a Chocolatey Source?
 
-What is a Chocolatey Source?
++++
+
+@quote[Chocolatey has had the ability to be able to work with packages from one or more sources since its inception back in 2011. With that, Chocolatey comes with a default package repository configured - the community package repository]
 
 +++
 
@@ -403,7 +403,7 @@ What is a Chocolatey Source?
 @ul[](false)
 * Open a terminal and run the following command:
 @ulend
-<pre><code class="lang-powershell hljs"><span class="line">choco source</span><span class="line">choco source list</span></code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">choco source list</span></code></pre>
 
 @snapend
 
@@ -415,15 +415,39 @@ What is a Chocolatey Source?
 
 +++
 
-## Add Test Repository Source
+## Remove Chocolatey Community Repository
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+<pre><code class="lang-powershell hljs"><span class="line">choco source remove --name="'chocolatey'"</span></code></pre>
+
+@snapend
 
 +++
 
-## Result
+## Add Nexus Repository
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+<pre><code class="lang-powershell hljs"><span class="line">choco source add --name="'nexus'"  &#x60;
+  --source="'http://localhost:8081/repository/internalrepo'"  &#x60;
+  --allow-self-service</span></code></pre>
+
+@snapend
 
 +++
 
-## Add Production Repository Source
+## Add Nexus API Key
 
 ---
 
@@ -461,7 +485,8 @@ What is a Chocolatey Source?
 @ul[](false)
 * Open a terminal and run the following commands:
 @ulend
-<pre><code class="lang-powershell hljs"><span class="line">choco feature disable --name="'showNonElevatedWarnings'"</span><span class="line">choco feature enable --name="'useBackgroundService'"</span><span class="line">choco feature enable --name="'useBackgroundServiceWithNonAdministratorsOnly'"</span></code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">choco feature disable --name="'showNonElevatedWarnings'"</span><span class="line">choco feature enable --name="'useBackgroundService'"</span><span class="line">choco feature enable  &#x60;
+  --name="'useBackgroundServiceWithNonAdministratorsOnly'"</span></code></pre>
 
 @snapend
 
@@ -719,7 +744,8 @@ Once installed and configured, you can use CCM to:
 - Open a terminal and execute the following:
 @ulend
 
-<pre><code class="lang-powershell hljs"><span class="line">choco config set --name="'centralManagementServiceUrl'" --value="'https://$($hostname):24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">choco config set --name="'centralManagementServiceUrl'"  &#x60;
+  --value="'https://$($hostname):24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
 
 @snapend
 

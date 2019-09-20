@@ -34,3 +34,4 @@ In order to run this build locally, you will need the following things installed
   * `brew cask install atom`
 * pwgen
   * `brew install pwgen`
+

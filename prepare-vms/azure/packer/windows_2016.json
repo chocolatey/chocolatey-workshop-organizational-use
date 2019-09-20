@@ -29,12 +29,16 @@
     {
       "scripts": [
         "../../scripts/InstallOpenSsh.ps1",
+        "../../scripts/PullAzureAssets.ps1",
         "../../scripts/InstallChocolatey.ps1",
-        "../../scripts/InstallBGInfo.ps1",
-        "../../scripts/InstallSharedApps.ps1",
-        "../../scripts/InstallAdditionalApps.ps1",
         "../../scripts/InstallChocolateyLicensed.ps1",
-        "../../scripts/InstallWindowsUpdates.ps1"
+        "../../scripts/InstallBGInfo.ps1",
+        "../../scripts/ProvisionNexus.ps1",
+        "../../scripts/InstallVLC.ps1",
+        "../../scripts/InstallSharedApps.ps1",
+        "../../scripts/ProvisionChocolateyGUI.ps1",
+        "../../scripts/InstallWindowsUpdates.ps1",
+        "../../scripts/ProvisionLocalUser.ps1"
       ],
       "environment_vars": [
         "AZURE_SAS={{user `azure_sas`}}",

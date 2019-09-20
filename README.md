@@ -20,7 +20,7 @@ In this workshop you will get hands on experience with:
 * Setting up package repositories (Nexus)
 * Self Service Management of Package Installations
 * Synchronizing traditionally installed applications with Chocolatey Packages
-* Combining Chocolatey with Configuration Management Systems (?)
+* Combining Chocolatey with Configuration Management Systems
 * Complete visibility of package installations using Chocolatey Central Management
 
 ## Workshop slides

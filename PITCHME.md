@@ -367,6 +367,9 @@ Test login credentials to make sure you have access.
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
 
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco install putty</span></code></pre>
 
 @snapend
@@ -397,7 +400,9 @@ What is a Chocolatey Source?
 
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
-
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco source</span><span class="line">choco source list</span></code></pre>
 
 @snapend
@@ -432,7 +437,9 @@ What is a Chocolatey Source?
 
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
-
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
 <pre><code class="lang-powershell hljs"><span class="line">chocolateygui</span></code></pre>
 
 @snapend
@@ -451,7 +458,9 @@ What is a Chocolatey Source?
 
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
-
+@ul[](false)
+* Open a terminal and run the following commands:
+@ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco feature disable --name="'showNonElevatedWarnings'"</span><span class="line">choco feature enable --name="'useBackgroundService'"</span><span class="line">choco feature enable --name="'useBackgroundServiceWithNonAdministratorsOnly'"</span></code></pre>
 
 @snapend

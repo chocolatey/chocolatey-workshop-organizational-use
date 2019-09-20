@@ -772,6 +772,48 @@ In order to use Chocolatey with Puppet, it is necessary to install the Chocolate
 
 ![Notepad++ installed via Chocolatey and Puppet](assets/images/puppet_notepad_plus_plus.png)
 
++++
+
+## Configure Chocolatey Sources with puppet
+
+```
+chocolateysource {'chocolatey':
+  ensure   => present,
+  location => 'https://chocolatey.org/api/v2',
+  priority => 1,
+}
+```
+
++++
+
+## Enable and disable features
+
+```
+chocolateyfeature {'autouninstaller':
+  ensure => enabled,
+}
+```
+
+```
+chocolateyfeature {'usepackageexitcodes':
+  ensure => disabled,
+}
+```
+
++++
+
+## Set Chocolatey Configuration using Chocolatey
+
+```
+chocolateyconfig {'cachelocation':
+  value  => "c:\\downloads",
+}
+```
+
++++
+
+All available options are [documented](https://forge.puppet.com/puppetlabs/chocolatey)
+
 ---
 
 ## Chocolatey Central Management

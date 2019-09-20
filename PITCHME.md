@@ -449,6 +449,21 @@ Test login credentials to make sure you have access.
 
 ## Add Nexus API Key
 
+@snap[center exercise-box]
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+@ul[](false)
+* Open the file `c:\programdata\sonatype-work\nexus3\admin.password` and copy password
+* Log into Nexus as `admin` with this password
+* Change password when prompted
+* Navigate to user page and find API Key and copy it
+* Open a terminal and run the following command:
+@ulend
+<pre><code class="lang-powershell hljs"><span class="line">choco apikey --api-key="'{api-key}'" &#x60;
+  --source="'http://localhost:8081/repository/internalrepo'"</span></code></pre>
+
+@snapend
+
 ---
 
 ## Chocolatey Self Service

@@ -559,7 +559,7 @@ Test login credentials to make sure you have access.
 
 @ul[](false)
 - Open Chocolatey GUI
-- Switch to the chocolatey source and search for malwarebytes
+- Switch to the nexus source and search for malwarebytes
 - Right click and select install
 - Go to Add Remove Programs, and verify it is installed correctly
 @ulend

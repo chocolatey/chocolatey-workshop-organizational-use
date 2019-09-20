@@ -33,8 +33,6 @@
         "../../scripts/InstallBGInfo.ps1",
         "../../scripts/InstallSharedApps.ps1",
         "../../scripts/InstallAdditionalApps.ps1",
-        "../../scripts/ProvisionChocolateyServer.ps1",
-        "../../scripts/ProvisionJenkins.ps1",
         "../../scripts/InstallChocolateyLicensed.ps1",
         "../../scripts/InstallWindowsUpdates.ps1"
       ],

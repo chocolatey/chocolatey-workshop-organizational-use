@@ -740,6 +740,38 @@ Test login credentials to make sure you have access.
 
 The @css[text-gold text-bold](Sane) Way to Manage Software on Windows
 
++++
+
+## Using Chocolatey with Puppet
+
+In order to use Chocolatey with Puppet, it is necessary to install the Chocolatey Puppet Module.  This can be done separately, or as part of the [Windows Module Pack](https://puppet.com/docs/pe/2019.1/installing_and_using_windows_modules.html#install-windows-module-pack)
+
+<pre><code class="lang-powershell hljs"><span class="line">puppet module install puppetlabs/windows</span></code></pre>
+
++++
+
+## Install Notepad++ via Chocolatey and Puppet
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Create a new file called `chocolatey.pp` in the `c:/temp` folder using a text editor
+* In the file, add the following:
+<pre><code class="lang-powershell hljs"><span class="line">include chocolatey</span><span class="line"> </span><span class="line"></span><span class="line">package { 'notepadplusplus.install':</span><span class="line">  provider => chocolatey,</span><span class="line">  ensure   => installed</span><span class="line">}</span></code></pre>
+* Open a terminal and run the following command:
+<pre><code class="lang-powershell hljs"><span class="line">puppet apply c:/temp/chocolatey.pp</span></code></pre>
+@ulend
+@snapend
+
++++
+
+## Result
+
+![Notepad++ installed via Chocolatey and Puppet](assets/images/puppet_notepad_plus_plus.png)
+
 ---
 
 ## Chocolatey Central Management

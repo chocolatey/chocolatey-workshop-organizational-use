@@ -814,6 +814,10 @@ chocolateyconfig {'cachelocation':
 
 All available options are [documented](https://forge.puppet.com/puppetlabs/chocolatey)
 
++++
+
+If you are interested in doing the same with Chef, I did a [talk](https://github.com/gep13-talks/ChocolateyChefDemos) which was recorded and is available [here](https://youtu.be/HEJbNNIIy30).
+
 ---
 
 ## Chocolatey Central Management

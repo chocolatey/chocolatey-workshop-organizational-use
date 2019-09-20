@@ -44,7 +44,6 @@ if (-not (Test-Path $packagePath)) {
     'chocolatey.license.xml'
 ) | ForEach-Object {
     $uri = "{0}/{1}{2}" -f $azureContainer, $_, $azureSas
-    Write-Host $uri
     $downloadPath = Join-Path -Path $packagePath -ChildPath $_
     Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
 }

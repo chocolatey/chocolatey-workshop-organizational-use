@@ -11,6 +11,7 @@ if (-not (Test-Path $packagePath)) {
 @( 'chocolatey.0.10.15.nupkg',
     '7zip.install.19.0.nupkg',
     'adoptopenjdkjre.12.0.2.10.nupkg',
+    'bginfo.4.25.nupkg',
     'chocolatey.extension.2.0.2.nupkg',
     'chocolatey-agent.0.9.1.nupkg',
     'chocolatey-core.extension.1.3.3.nupkg',

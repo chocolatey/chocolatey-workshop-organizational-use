@@ -1,6 +1,6 @@
 # create a local folder to hold assets
-$azureSas = '?st=2019-09-20T08%3A24%3A30Z&se=2019-09-26T08%3A24%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=DNfi33JDiYPZrHAbNsaOs2yTCtITyEvjJPAy5%2FrF1aw%3D' #$env:AZURE_SAS
-$azureContainer = 'https://winops2019.blob.core.windows.net/package-assets' #$env:AZURE_CONTAINER
+$azureSas = $env:AZURE_SAS
+$azureContainer = $env:AZURE_CONTAINER
 $packagePath = 'c:\packages'
 
 if (-not (Test-Path $packagePath)) {

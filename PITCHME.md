@@ -447,6 +447,12 @@ Test login credentials to make sure you have access.
 
 +++
 
+## Result
+
+![Output from choco source](assets/images/choco-source-nexus.png)
+
++++
+
 ## Add Nexus API Key
 
 @snap[center exercise-box]

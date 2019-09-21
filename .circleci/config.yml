@@ -107,7 +107,7 @@ jobs:
           command: |
             cd /tmp/workspace
             if [ -f machines.md ]; then
-              npm install -g mdpdf
+              npm install -g mdpdf@2.0.1
               cp machines.md ${CIRCLE_TAG}-machines.md
               mdpdf ${CIRCLE_TAG}-machines.md
               echo "Uploading ${CIRCLE_TAG}-machines.pdf to Slack"

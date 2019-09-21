@@ -22,6 +22,6 @@ terraform init
 terraform apply \
   -var "count=$number_of_machines" \
   -var "dns_prefix=$dns_prefix" \
-  -var "group_name=${dns_prefix}-${number_of_machines}-chocolatey-workshop-internalizer" \
+  -var "group_name=${dns_prefix}-${number_of_machines}-chocolatey-workshop-organizational-use" \
   -var "account=${dns_prefix}${number_of_machines}workshop" \
   -auto-approve

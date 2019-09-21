@@ -6,7 +6,7 @@ You can prepare the Windows Server 2016 VM's with one of these Terraform templat
 
 ## Full automated build
 
-We've implemented a fully automated build to run a Chocolatey Internalizer Workshop very easily.
+We've implemented a fully automated build to run a Chocolatey Organizational Use Workshop very easily.
 
 ![Build pipeline to create 40 VM's in Azure with a CircleCI build using Packer and Terraform](images/pipeline.png)
 

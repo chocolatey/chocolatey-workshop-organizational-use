@@ -442,7 +442,10 @@ Test login credentials to make sure you have access.
 <pre><code class="lang-powershell hljs"><span class="line">choco source add --name="'nexus'"  &#x60;
   --source="'http://localhost:8081/repository/internalrepo'"  &#x60;
   --allow-self-service</span></code></pre>
-
+@ul[](false)
+* Back in the terminal, run the following command again:
+@ulend
+<pre><code class="lang-powershell hljs"><span class="line">choco source list</span></code></pre>
 @snapend
 
 +++
@@ -453,22 +456,40 @@ Test login credentials to make sure you have access.
 
 +++
 
-## Add Nexus API Key
+## Add Nexus API Key - Part 1
 
 @snap[center exercise-box]
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
 @ul[](false)
 * Open the file `c:\programdata\sonatype-work\nexus3\admin.password` and copy password
-* Log into Nexus as `admin` with this password
-* Change password when prompted
-* Navigate to user page and find API Key and copy it
+* Open a web browser to http://localhost:8081 and log in as `admin` with this password
+* Change password when prompted and choose to enable anonymous access
+* Click the user name in the top right hand corner of web page
+* Click `NuGet API Key` in left hand menu
+* Click `Acces API Key` and enter password, then copy API Key to clipboard
+@ulend
+@snapend
+
++++
+
+## Add Nexus API Key - Part 2
+
+@snap[center exercise-box]
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+@ul[](false)
 * Open a terminal and run the following command:
 @ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco apikey --api-key="'{api-key}'" &#x60;
-  --source="'http://localhost:8081/repository/internalrepo'"</span></code></pre>
+  --source="'http://localhost:8081/repository/internalrepo/'"</span></code></pre>
 
 @snapend
++++
+
+## Result
+
+![Add API Key fro Nexus](assets/images/choco-api-key-nexus.png)
 
 ---
 
@@ -513,6 +534,12 @@ Test login credentials to make sure you have access.
 
 +++
 
+## Result
+
+![Enable self service features](assets/images/self-service-features.png)
+
++++
+
 ## Switch to Non-Admin account
 
 @snap[center exercise-box]
@@ -522,7 +549,7 @@ Test login credentials to make sure you have access.
 
 @ul[](false)
 - Log out as the current user
-- Log in as the nonAdmin user
+- Log in as the `selfservice` user with password `Password01`
 @ulend
 
 @snapend
@@ -762,8 +789,8 @@ In order to use Chocolatey with Puppet, it is necessary to install the Chocolate
 * In the file, add the following:
 <pre><code class="lang-powershell hljs"><span class="line">include chocolatey</span><span class="line"> </span><span class="line"></span><span class="line">package { 'notepadplusplus.install':</span><span class="line">  provider => chocolatey,</span><span class="line">  ensure   => installed</span><span class="line">}</span></code></pre>
 * Open a terminal and run the following command:
-<pre><code class="lang-powershell hljs"><span class="line">puppet apply c:/temp/chocolatey.pp</span></code></pre>
 @ulend
+<pre><code class="lang-powershell hljs"><span class="line">puppet apply c:/temp/chocolatey.pp</span></code></pre>
 @snapend
 
 +++

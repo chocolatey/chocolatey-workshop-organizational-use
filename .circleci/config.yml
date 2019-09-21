@@ -112,6 +112,7 @@ jobs:
               echo "Copying machine.md"
               cp machines.md ${CIRCLE_TAG}-machines.md
               echo "Creating PDF from machines.md"
+              mdpdf --help
               mdpdf ${CIRCLE_TAG}-machines.md
               echo "Uploading ${CIRCLE_TAG}-machines.pdf to Slack"
 

@@ -93,6 +93,14 @@ try{
   }
 } catch {$global:error.RemoveAt(0)}
 
+# Configure ChocolateyGUI
+
+chocolateyguicli feature enable -n=DefaultToTileViewForLocalSource
+chocolateyguicli feature enable -n=DefaultToTileViewForRemoteSource
+chocolateyguicli feature enable -n=ShowAdditionalPackageInformation
+
+# CleanUp
+
 Write-Host "Cleaning up"
 Remove-Item C:\provision.ps1
 

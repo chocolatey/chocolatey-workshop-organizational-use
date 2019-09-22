@@ -60,7 +60,7 @@ $Command.ExecuteNonQuery()
 $Connection.Close()
 
 # CCM Configuration
-choco config set centralManagementReportPackagesTimerIntervalInSeconds 60 # Should be 1800 (i.e. 30 minutes)
+choco config set centralManagementReportPackagesTimerIntervalInSeconds 1800 # Should be 1800 (i.e. 30 minutes)
 choco config set centralManagementServiceUrl "https://$($env:COMPUTERNAME):24020/ChocolateyManagementService"
 choco config set centralManagementReceiveTimeoutInSeconds 60
 choco config set centralManagementSendTimeoutInSeconds 60

@@ -2,6 +2,7 @@
 $azureSas = $env:AZURE_SAS
 $azureContainer = $env:AZURE_CONTAINER
 $packagePath = 'c:\packages'
+$installerPath = 'c:\installers'
 
 if (-not (Test-Path $packagePath)) {
     New-Item -Path $packagePath -ItemType Directory
@@ -46,9 +47,14 @@ if (-not (Test-Path $packagePath)) {
     'vscode.1.38.1.nupkg',
 
     'vlc-2.2.8-win64.exe',
+    'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe',
     'chocolatey.license.xml'
 ) | ForEach-Object {
     $uri = "{0}/{1}{2}" -f $azureContainer, $_, $azureSas
     $downloadPath = Join-Path -Path $packagePath -ChildPath $_
     Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
 }
+
+New-Item -Path $installerPath -ItemType Directory
+Move-Item -Path (Join-Path -Path $packagePath -ChildPath 'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe') `
+        -Destination (Join-Path -Path $installerPath -ChildPath 'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe')

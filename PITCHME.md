@@ -440,7 +440,7 @@ Test login credentials to make sure you have access.
 * Open a terminal and run the following command:
 @ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco source add --name="'nexus'"  &#x60;
-  --source="'http://localhost:8081/repository/internalrepo'"  &#x60;
+  --source="'http://localhost:8081/repository/internalrepo/'"  &#x60;
   --allow-self-service</span></code></pre>
 @ul[](false)
 * Back in the terminal, run the following command again:

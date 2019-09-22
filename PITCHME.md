@@ -46,9 +46,7 @@ Senior Software Engineer @ Chocolatey Software
 
 @snap[west span-65]
 Senior Technical Engineer @ Chocolatey Software
-<br>
-<br>
-25+ years in IT
+<br/>
 <br/>
 ![MVP Logo](assets/images/mvp.jpg)
 @snapend

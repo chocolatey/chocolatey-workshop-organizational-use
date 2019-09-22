@@ -99,6 +99,9 @@ chocolateyguicli feature enable -n=DefaultToTileViewForLocalSource
 chocolateyguicli feature enable -n=DefaultToTileViewForRemoteSource
 chocolateyguicli feature enable -n=ShowAdditionalPackageInformation
 
+# Disable RDP NLA
+(Get-WmiObject -class Win32_TSGeneralSetting -Namespace root\cimv2\terminalservices -Filter "TerminalName='RDP-tcp'").SetUserAuthenticationRequired(0)
+
 # CleanUp
 
 Write-Host "Cleaning up"

@@ -38,7 +38,8 @@
         "../../scripts/InstallSharedApps.ps1",
         "../../scripts/ProvisionChocolateyGui.ps1",
         "../../scripts/InstallWindowsUpdates.ps1",
-        "../../scripts/ProvisionLocalUser.ps1"
+        "../../scripts/ProvisionLocalUser.ps1",
+        "../../scripts/ResetRegistryKey.ps1"
       ],
       "environment_vars": [
         "AZURE_SAS={{user `azure_sas`}}",

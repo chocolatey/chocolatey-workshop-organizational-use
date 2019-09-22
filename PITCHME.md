@@ -562,7 +562,7 @@ Test login credentials to make sure you have access.
 <br>
 
 @ul[](false)
-- Browse to the c:/installers folder
+- Browse to the c:\installers folder
 - Double click the MalwareBytes installer
 - It will fail with an error, i.e. not enough permissions
 @ulend

@@ -358,25 +358,15 @@ Test login credentials to make sure you have access.
 
 ---
 
-## Install putty
+## So, let's install paint.net with Chocolatey
 
-@snap[center exercise-box]
+---
 
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-
-@ul[](false)
-* Open a terminal and run the following command:
-@ulend
-<pre><code class="lang-powershell hljs"><span class="line">choco install putty</span></code></pre>
-
-@snapend
+# WAIT!!!
 
 +++
 
-## Result
-
-![Output from choco install putty](assets/images/choco-install-putty.png)
+## We should follow Organizational best practices...
 
 ---
 
@@ -464,8 +454,6 @@ Test login credentials to make sure you have access.
 * Open a web browser to http://localhost:8081 and log in as `admin` with this password
 * Change password when prompted and choose to enable anonymous access
 * Click the user name in the top right hand corner of web page
-* Click `NuGet API Key` in left hand menu
-* Click `Acces API Key` and enter password, then copy API Key to clipboard
 @ulend
 @snapend
 
@@ -477,7 +465,9 @@ Test login credentials to make sure you have access.
 @fa[keyboard-o]()&nbsp;Exercise
 <br>
 @ul[](false)
-* Open a terminal and run the following command:
+* Click `NuGet API Key` in left hand menu
+* Click `Acces API Key` and enter password, then copy API Key to clipboard
+* Open a terminal and run the following command (replacing api-key with actual value):
 @ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco apikey --api-key="'{api-key}'" &#x60;
   --source="'http://localhost:8081/repository/internalrepo/'"</span></code></pre>
@@ -488,6 +478,28 @@ Test login credentials to make sure you have access.
 ## Result
 
 ![Add API Key fro Nexus](assets/images/choco-api-key-nexus.png)
+
+---
+
+## Now we can install paint.net
+
+@snap[center exercise-box]
+
+@fa[keyboard-o]()&nbsp;Exercise
+<br>
+
+@ul[](false)
+* Open a terminal and run the following command:
+@ulend
+<pre><code class="lang-powershell hljs"><span class="line">choco install paint.net</span></code></pre>
+
+@snapend
+
++++
+
+## Result
+
+![Output from choco install paint.net](assets/images/choco-install-paint.net.png)
 
 ---
 
@@ -620,6 +632,7 @@ Test login credentials to make sure you have access.
 <br>
 
 @ul[](false)
+* Log back into the VM as the `training` user
 * Open a terminal and run the following command:
 @ulend
 
@@ -783,12 +796,12 @@ In order to use Chocolatey with Puppet, it is necessary to install the Chocolate
 <br>
 
 @ul[](false)
-* Create a new file called `chocolatey.pp` in the `c:/temp` folder using a text editor
+* Create a new file called `chocolatey.pp` in the `c:\temp` folder using a text editor
 * In the file, add the following:
 <pre><code class="lang-powershell hljs"><span class="line">include chocolatey</span><span class="line"> </span><span class="line"></span><span class="line">package { 'notepadplusplus.install':</span><span class="line">  provider => chocolatey,</span><span class="line">  ensure   => installed</span><span class="line">}</span></code></pre>
-* Open a terminal and run the following command:
+* Open a terminal and run the command:
 @ulend
-<pre><code class="lang-powershell hljs"><span class="line">puppet apply c:/temp/chocolatey.pp</span></code></pre>
+<pre><code class="lang-powershell hljs"><span class="line">puppet apply c:\temp\chocolatey.pp</span></code></pre>
 @snapend
 
 +++
@@ -863,7 +876,7 @@ If you are interested in doing the same with Chef, I did a [talk](https://github
 
 Once installed and configured, you can use CCM to:
 
-* bring reporting to teh Organisational level
+* bring reporting to the Organisational level
 * quickly see all software across the Organization and see what needs attention immediately
 * create reports for tracking and auditing purposes
 

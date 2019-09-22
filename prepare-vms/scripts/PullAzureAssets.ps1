@@ -58,3 +58,5 @@ if (-not (Test-Path $packagePath)) {
 New-Item -Path $installerPath -ItemType Directory
 Move-Item -Path (Join-Path -Path $packagePath -ChildPath 'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe') `
         -Destination (Join-Path -Path $installerPath -ChildPath 'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe')
+
+New-Item -Path 'c:\temp' -ItemType Directory

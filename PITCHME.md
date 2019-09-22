@@ -214,7 +214,7 @@ You should have been given a piece of paper like this:
 
 Test login credentials to make sure you have access.
 
-**NOTE:** Initial login will likely cause a reboot of VM.
+**NOTE:** Initial login may cause a reboot of VM.
 
 ---
 

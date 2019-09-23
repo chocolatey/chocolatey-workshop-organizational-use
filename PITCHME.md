@@ -798,7 +798,9 @@ In order to use Chocolatey with Puppet, it is necessary to install the Chocolate
 @ul[](false)
 * Create a new file called `chocolatey.pp` in the `c:\temp` folder using a text editor
 * In the file, add the following:
+@ulend
 <pre><code class="lang-powershell hljs"><span class="line">include chocolatey</span><span class="line"> </span><span class="line"></span><span class="line">package { 'notepadplusplus.install':</span><span class="line">  provider => chocolatey,</span><span class="line">  ensure   => installed</span><span class="line">}</span></code></pre>
+@ul[](false)
 * Open a terminal and run the command:
 @ulend
 <pre><code class="lang-powershell hljs"><span class="line">puppet apply c:\temp\chocolatey.pp</span></code></pre>

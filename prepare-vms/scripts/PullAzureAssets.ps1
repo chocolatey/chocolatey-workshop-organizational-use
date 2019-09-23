@@ -22,6 +22,7 @@ if (-not (Test-Path $packagePath)) {
     'chocolatey-management-database.0.1.0-beta-20190501.nupkg',
     'chocolatey-management-service.0.1.0-beta-20190501.nupkg',
     'chocolatey-management-web.0.1.0-beta-20190501.nupkg',
+    'chocolatey-vscode.extension.1.1.0.nupkg',
     'chocolatey-windowsupdate.extension.1.0.4.nupkg',
     'DotNet4.5.2.4.5.2.20140902.nupkg',
     'dotnet4.6.2.4.6.01590.20190822.nupkg',
@@ -45,6 +46,7 @@ if (-not (Test-Path $packagePath)) {
     'putty.portable.0.72.nupkg',
     'vlc.3.0.8.nupkg',
     'vscode.1.38.1.nupkg',
+    'vscode-puppet.0.20.0.nupkg',
 
     'vlc-2.2.8-win64.exe',
     'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe',

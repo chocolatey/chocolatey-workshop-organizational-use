@@ -1,4 +1,4 @@
-choco source add --name='internalrepo' --source='http://localhost:8081/repository/internaprepo'
+choco source add --name="'internalrepo'" --source="'http://localhost:8081/repository/internalrepo/'"
 
 # Prerequosite packages required
 choco install IIS-WebServer --source windowsfeatures
@@ -14,7 +14,7 @@ choco upgrade sql-server-management-studio -y
 choco install adobereader -y
 
 # Install CCM
-choco upgrade chocolatey-management-database -y --source="'c:\packages;chocolatey'" --pre --params='/SqlServerInstance=localhost\SQLEXPRESS'
+choco upgrade chocolatey-management-database -y --source="'c:\packages;chocolatey'" --params='/SqlServerInstance=localhost\SQLEXPRESS'
 
 # Add ccmdbserver\ccmserviceuser as owner of ChocolateyManagement Database
 $username = "$($env:COMPUTERNAME)\ChocolateyLocalAdmin"
@@ -37,8 +37,8 @@ $Command.Connection = $Connection
 $Command.ExecuteNonQuery()
 $Connection.Close()
 
-choco upgrade chocolatey-management-service -y --source="'c:\packages;chocolatey'" --pre --params='/SqlServerInstance=localhost\SQLEXPRESS'
-choco upgrade chocolatey-management-web -y --source="'c:\packages;chocolatey'" --pre --params='/SqlServerInstance=localhost\SQLEXPRESS'
+choco upgrade chocolatey-management-service -y --source="'c:\packages;chocolatey'" --params='/SqlServerInstance=localhost\SQLEXPRESS'
+choco upgrade chocolatey-management-web -y --source="'c:\packages;chocolatey'" --params='/SqlServerInstance=localhost\SQLEXPRESS'
 
 $appPoolUserName = 'IIS APPPOOL\ChocolateyCentralManagement'
 $chocolateyAppPoolQuery = "

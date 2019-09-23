@@ -898,7 +898,7 @@ Once installed and configured, you can use CCM to:
 @ulend
 
 <pre><code class="lang-powershell hljs"><span class="line">choco config set --name="'centralManagementServiceUrl'"  &#x60;
-  --value="'https://$($hostname):24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
+  --value="'https://winops-01:24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
 
 @snapend
 

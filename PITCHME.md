@@ -466,7 +466,7 @@ Test login credentials to make sure you have access.
 <br>
 @ul[](false)
 * Click `NuGet API Key` in left hand menu
-* Click `Acces API Key` and enter password, then copy API Key to clipboard
+* Click `Access API Key` and enter password, then copy API Key to clipboard
 * Open a terminal and run the following command (replacing api-key with actual value):
 @ulend
 <pre><code class="lang-powershell hljs"><span class="line">choco apikey --api-key="'{api-key}'" &#x60;

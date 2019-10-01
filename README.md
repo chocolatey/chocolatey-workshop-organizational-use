@@ -27,6 +27,11 @@ In this workshop you will get hands on experience with:
 
 * The most recent slides for this presentation can be found here [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/master)
 
+## Past workshops
+
+- This presentation was given at [WinOps 2019](https://www.winops.org/london-2019/) on 23rd September 2019
+  - The slides can be found here [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/winops2019)
+
 ## Running the workshop
 
 * Prepare a couple of Win2016 VM's in in your favourite cloud.

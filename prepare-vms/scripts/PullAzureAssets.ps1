@@ -53,10 +53,18 @@ if (-not (Test-Path $packagePath)) {
     'mb3-setup-consumer-3.8.3.2965-1.0.625-1.0.12587.exe',
     'chocolatey.license.xml'
 ) | ForEach-Object {
-    $uri = "{0}/{1}{2}" -f $azureContainer, $_, $azureSas
-    $downloadPath = Join-Path -Path $packagePath -ChildPath $_
-    Write-Host "Downloading asset: $_"
+    # we do this here as it allows us to use it in the catch block
+    $packageName = $_
+    $uri = "{0}/{1}{2}" -f $azureContainer, $packageName, $azureSas
+    $downloadPath = Join-Path -Path $packagePath -ChildPath $packageName
+    Write-Host "Downloading asset: $packageName"
+    try {
         Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
+    }
+    catch {
+        Write-Host "Download error for asset '$packageName'. (Error $_.Exception.Message)"
+        throw
+    }
 }
 
 New-Item -Path $installerPath -ItemType Directory

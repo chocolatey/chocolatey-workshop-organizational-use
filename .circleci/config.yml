@@ -4,6 +4,7 @@ general:
   branches:
     only:
       - master
+      - puppet
 jobs:
   shellcheck:
     docker:

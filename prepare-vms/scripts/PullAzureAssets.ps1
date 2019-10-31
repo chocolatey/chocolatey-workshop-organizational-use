@@ -41,7 +41,8 @@ if (-not (Test-Path $packagePath)) {
     'nexus-repository.3.18.1.01.nupkg',
     'notepadplusplus.install.7.7.1.nupkg',
     'paint.net.4.2.4.nupkg',
-    'puppet-agent.6.9.0.nupkg',
+    'puppet-agent.6.10.1.nupkg',
+    'puppet-bolt.1.35.0.nupkg',
     'putty.0.72.nupkg',
     'putty.portable.0.72.nupkg',
     'vlc.3.0.8.nupkg',
@@ -55,7 +56,7 @@ if (-not (Test-Path $packagePath)) {
     $uri = "{0}/{1}{2}" -f $azureContainer, $_, $azureSas
     $downloadPath = Join-Path -Path $packagePath -ChildPath $_
     Write-Host "Downloading asset: $_"
-    Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
+        Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
 }
 
 New-Item -Path $installerPath -ItemType Directory

@@ -36,7 +36,6 @@
         "../../scripts/ProvisionNexus.ps1",
         "../../scripts/InstallVLC.ps1",
         "../../scripts/InstallSharedApps.ps1",
-        "../../scripts/InstallPuppetApps.ps1",
         "../../scripts/ProvisionChocolateyGui.ps1",
         "../../scripts/InstallWindowsUpdates.ps1",
         "../../scripts/ProvisionLocalUser.ps1",

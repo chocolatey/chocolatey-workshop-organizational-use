@@ -54,6 +54,7 @@ if (-not (Test-Path $packagePath)) {
 ) | ForEach-Object {
     $uri = "{0}/{1}{2}" -f $azureContainer, $_, $azureSas
     $downloadPath = Join-Path -Path $packagePath -ChildPath $_
+    Write-Host "URI to pull from: $uri"
     Invoke-WebRequest -Uri $uri -UseBasicParsing -OutFile $downloadPath
 }
 

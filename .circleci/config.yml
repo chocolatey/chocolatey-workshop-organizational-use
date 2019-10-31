@@ -146,6 +146,7 @@ workflows:
             branches:
               only:
                 - master
+                - puppet
 
   build-infrastructure:
     jobs:

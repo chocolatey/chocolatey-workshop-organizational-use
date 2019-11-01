@@ -67,6 +67,12 @@ $Shortcut.TargetPath = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.ex
 $shortcut.WorkingDirectory = "$Home"
 $Shortcut.Save()
 
+# Create shortcut to the slides
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("$Home\Desktop\Slides.url")
+$Shortcut.TargetPath = "https://github.com/chocolatey/chocolatey-workshop-organizational-use"
+$Shortcut.Save()
+
 $key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
 $advancedKey = "$key\Advanced"
 Set-ItemProperty $advancedKey Hidden 1

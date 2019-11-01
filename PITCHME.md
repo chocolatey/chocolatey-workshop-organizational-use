@@ -83,6 +83,7 @@ Senior Solutions Engineer @ Puppet
 @ul[](false)
 
 * 12:00: Lunch
+* 12:15: Introductions and Prerequisites.
 * 12:45: Workshop
 * 13:45: Break
 * 14:00: Workshop
@@ -175,7 +176,7 @@ Would recommend not using arrow keys.
 @ul[](false)
 
 * This is the stuff you are supposed to do!
-* Go to [this url](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/master) to view these slides.
+* Go to [this url](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/puppet) to view these slides.
 
 @ulend
 @snapend

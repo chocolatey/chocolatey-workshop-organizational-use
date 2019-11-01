@@ -90,4 +90,8 @@ h4 { font-size: 2rem !important; }
     text-align: left;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif !important;
-  }
+}
+
+.reveal section img {
+    background: none;
+}

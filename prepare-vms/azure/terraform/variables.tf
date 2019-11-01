@@ -17,7 +17,7 @@ variable "account" {
 }
 
 variable "location" {
-  default = "northeurope"
+  default = "eastus"
 }
 
 variable "azure_dns_suffix" {

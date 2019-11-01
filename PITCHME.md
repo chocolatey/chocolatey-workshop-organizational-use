@@ -107,12 +107,9 @@ We have a fairly tight agenda, but please feel free to interrupt for any questio
 
 * Removing Chocolatey packages
 * Configuring Chocolatey package repositories with Puppet
-* Setting up your workstation for Chocolatey packaging (best tools to use)
 * Preparing Chocolatey for internal use
-* Setting up package repositories (e.g Nexus)
 * Self Service Management of Package Installations
 * Synchronizing traditionally installed applications with Chocolatey Packages
-* Complete visibility of package installations using Chocolatey Central Management
 * Hands-on advice and best practices from Chocolatey and Puppet experts
 
 @ulend
@@ -134,8 +131,8 @@ We have a fairly tight agenda, but please feel free to interrupt for any questio
   * on Windows, you are probably all set
   * on macOS, get Microsoft Remote Desktop from the App Store
   * on Linux, get [remmina](https://wiki.ubuntuusers.de/remmina/)
-* Some Chocolatey knowledge
-  * but it's OK if you are not a Chocolatey expert!
+* Some Chocolatey and Puppet knowledge
+  * but it's OK if you are not an expert!
 @ulend
 @snapend
 

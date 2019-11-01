@@ -31,6 +31,8 @@ In this workshop you will get hands on experience with:
 
 - This presentation was given at [WinOps 2019](https://www.winops.org/london-2019/) on 23rd September 2019
   - The slides can be found here [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/winops2019)
+- This presentation was given at [Microsoft Ignite 2019](https://info.puppet.com/Puppet-Chocolatey-Workshop-5Nov2019-Register.html) on 5 November 2019
+  - The slides can be found here [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/chocolatey/chocolatey-workshop-organizational-use/puppet/)
 
 ## Running the workshop
 

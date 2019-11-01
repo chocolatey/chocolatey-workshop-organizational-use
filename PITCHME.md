@@ -82,13 +82,15 @@ Senior Solutions Engineer @ Puppet
 @snap[west]
 @ul[](false)
 
-* 09:00: Workshop Starts
-* 10:30: Coffee Break
-* 12:30: Workshop Ends
+* 12:00: Lunch
+* 12:45: Workshop
+* 13:45: Break
+* 14:00: Workshop
+* 15:00: Hosted Happy Hour and Golf!
 
 @ulend
 <br/><br/>
-Please feel free to interrupt for any questions that you might have.
+We have a fairly tight agenda, but please feel free to interrupt for any questions that you might have.
 @snapend
 
 +++
@@ -103,13 +105,15 @@ Please feel free to interrupt for any questions that you might have.
 @snap[west]
 @ul[](false)
 
-* Get access to workshop environments
-* Chocolatey fundamentals
-* Configuring package repositories
-* Using Chocolatey self-service
-* How to use Chocolatey sync command
-* Combining Chocolatey and Configuration Management
-* Chocolatey Central Management
+* Removing Chocolatey packages
+* Configuring Chocolatey package repositories with Puppet
+* Setting up your workstation for Chocolatey packaging (best tools to use)
+* Preparing Chocolatey for internal use
+* Setting up package repositories (e.g Nexus)
+* Self Service Management of Package Installations
+* Synchronizing traditionally installed applications with Chocolatey Packages
+* Complete visibility of package installations using Chocolatey Central Management
+* Hands-on advice and best practices from Chocolatey and Puppet experts
 
 @ulend
 @snapend

@@ -61,6 +61,7 @@ Write-Host "Disable autologon"
 New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name AutoAdminLogon -PropertyType DWORD -Value "0" -Force
 
 # Create shortcuts
+Write-Host "Creating PowerShell Shortcut"
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\Desktop\PowerShell.lnk")
 $Shortcut.TargetPath = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
@@ -68,6 +69,7 @@ $shortcut.WorkingDirectory = "$Home"
 $Shortcut.Save()
 
 # Create shortcut to the slides
+Write-Host "Creating Workshop Slides Shortcut"
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\Desktop\Slides.url")
 $Shortcut.TargetPath = "https://github.com/chocolatey/chocolatey-workshop-organizational-use"

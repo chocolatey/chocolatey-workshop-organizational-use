@@ -106,10 +106,10 @@ We have a fairly tight agenda, but please feel free to interrupt for any questio
 @snap[west]
 @ul[](false)
 
+* What is Chocolatey and Puppet
 * Removing Chocolatey packages
 * Configuring Chocolatey package repositories with Puppet
 * Preparing Chocolatey for internal use
-* Self Service Management of Package Installations
 * Synchronizing traditionally installed applications with Chocolatey Packages
 * Hands-on advice and best practices from Chocolatey and Puppet experts
 
@@ -504,91 +504,11 @@ Test login credentials to make sure you have access.
 
 ---
 
-## Chocolatey Self Service
-
-+++
-
-## Open Chocolatey GUI
-
-@snap[center exercise-box]
-
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-@ul[](false)
-* Open a terminal and run the following command:
-@ulend
-<pre><code class="lang-powershell hljs"><span class="line">chocolateygui</span></code></pre>
-
-@snapend
-
-+++
-
-## Result
-
-![Chocolatey GUI](assets/images/chocolatey-gui.png)
-
-+++
-
-## Setup Self Service
-
-@snap[center exercise-box]
-
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-@ul[](false)
-* Open a terminal and run the following commands:
-@ulend
-<pre><code class="lang-powershell hljs"><span class="line">choco feature disable --name="'showNonElevatedWarnings'"</span><span class="line">choco feature enable --name="'useBackgroundService'"</span><span class="line">choco feature enable  &#x60;
-  --name="'useBackgroundServiceWithNonAdministratorsOnly'"</span></code></pre>
-
-@snapend
-
-+++
-
-## Result
-
-![Enable self service features](assets/images/self-service-features.png)
-
-+++
-
-## Switch to Non-Admin account
-
-@snap[center exercise-box]
-
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-
-@ul[](false)
-- Log out as the current user
-- Log in as the `selfservice` user with password `Password01`
-@ulend
-
-@snapend
+## Chocolatey GUI
 
 +++
 
 ## Let's install MalwareBytes
-
-@snap[center exercise-box]
-
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-
-@ul[](false)
-- Browse to the c:\installers folder
-- Double click the MalwareBytes installer
-- It will fail with an error, i.e. not enough permissions
-@ulend
-@snapend
-
-+++
-## Result
-
-![Malwarebytes Install Error](assets/images/malwarebytes_install_error.png)
-
-+++
-
-## Let's try that again...
 
 @snap[center exercise-box]
 
@@ -855,10 +775,6 @@ chocolateyconfig {'cachelocation':
 
 All available options are [documented](https://forge.puppet.com/puppetlabs/chocolatey)
 
-+++
-
-If you are interested in doing the same with Chef, I did a [talk](https://github.com/gep13-talks/ChocolateyChefDemos) which was recorded and is available [here](https://youtu.be/HEJbNNIIy30).
-
 ---
 
 ## Chocolatey Central Management
@@ -882,34 +798,8 @@ Once installed and configured, you can use CCM to:
 * bring reporting to the Organisational level
 * quickly see all software across the Organization and see what needs attention immediately
 * create reports for tracking and auditing purposes
-
-+++
-
-# Demo
-
-+++
-
-## CCM in action...
-
-@snap[center exercise-box]
-
-@fa[keyboard-o]()&nbsp;Exercise
-<br>
-
-@ul[](false)
-- Open a terminal and execute the following:
-@ulend
-
-<pre><code class="lang-powershell hljs"><span class="line">choco config set --name="'centralManagementServiceUrl'"  &#x60;
-  --value="'https://winops-01:24020/ChocolateyManagementService'"</span><span class="line">choco feature enable --name="'useChocolateyCentralManagement'"</span></code></pre>
-
-@snapend
-
-+++
-
-## Result
-
-Open CCM Web UI and see clients checking into CCM
+* manage the package lifecycle
+* more updates to come (ie. Windows Updates)
 
 ---
 
@@ -918,11 +808,11 @@ Open CCM Web UI and see clients checking into CCM
 
 Feel free to get in touch after the workshop.
 
-Email: gary@chocolatey.io / paul@chocolatey.io
+Email: paul@chocolatey.io / matthew.stone@puppet.com
 
-Twitter: @gep13 / @pauby
+Twitter: @pauby / @matthewstone
 
-Web: https://chocolatey.org
+Web: https://chocolatey.org / https://puppet.com
 
 ---
 

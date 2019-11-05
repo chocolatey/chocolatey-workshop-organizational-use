@@ -260,6 +260,22 @@ Test login credentials to make sure you have access.
 
 ---
 
+What is Puppet?
+
++++
+
+![Puppet Logo](assets/images/puppet-logo.png)
+
++++
+
+![Bolt Logo](assets/images/bolt-logo.png)
+
++++
+
+![Bolt Workflow](assets/images/bolt-flow.png)
+
+---
+
 ## How does Chocolatey work?
 
 +++

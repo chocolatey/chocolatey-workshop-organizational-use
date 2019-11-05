@@ -270,7 +270,7 @@ Test login credentials to make sure you have access.
 
 ![Bolt Logo](assets/images/bolt-logo.png)
 
-+++?image=assets/images/bolt-flow.png&size=45% auto&color=black
++++?image=assets/images/bolt-flow.png&color=black
 
 ---
 

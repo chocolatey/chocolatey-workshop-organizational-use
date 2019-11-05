@@ -685,22 +685,6 @@ Test login credentials to make sure you have access.
 
 ---
 
-## Chocolatey and Configuration Management Systems
-
-+++
-
-## What does Chocolatey integrate with?
-
-+++
-
-## Everything!
-
-![Chocolatey Integrations](assets/images/integrations.jpg)
-
-The @css[text-gold text-bold](Sane) Way to Manage Software on Windows
-
-+++
-
 ## Using Chocolatey with Puppet
 
 In order to use Chocolatey with Puppet, it is necessary to install the Chocolatey Puppet Module.  This can be done separately, or as part of the [Windows Module Pack](https://puppet.com/docs/pe/2019.1/installing_and_using_windows_modules.html#install-windows-module-pack)

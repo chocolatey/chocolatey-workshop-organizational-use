@@ -3,7 +3,7 @@ theme : moon
 theme-override : assets/css/PITCHME.css
 footnote : "@pauby and @matthewstone"
 gatoken : UA-20926037-2
-logo: assets/images/chocolatey.png
+logo: assets/images/slide-logo.png
 logo-position: top-right
 highlight : atom-one-dark
 layout: center

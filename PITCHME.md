@@ -260,7 +260,7 @@ Test login credentials to make sure you have access.
 
 ---
 
-What is Puppet?
+## What is Puppet?
 
 +++
 
@@ -270,9 +270,7 @@ What is Puppet?
 
 ![Bolt Logo](assets/images/bolt-logo.png)
 
-+++
-
-![Bolt Workflow](assets/images/bolt-flow.png)
++++?image=assets/images/bolt-flow.png&size=45% auto&color=black
 
 ---
 
